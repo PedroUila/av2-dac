@@ -1,9 +1,9 @@
 package com.projeto.av2_dac.model;
 
 import lombok.*;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import jakarta.persistence.*;
 
 @Entity
 @Data
@@ -21,14 +21,16 @@ public class Carro {
     @NotNull
     private String cor;
     
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1)
     @NotEmpty
     @NotNull
-    private Integer qtdPortas;
+    private int portas;
 
-    @Column(nullable = false, unique = true, length = 11)
+    @Column(nullable = false, unique = true, length = 7)
     @NotEmpty
     @NotNull
     private String placa;
+    
 }   
+
 

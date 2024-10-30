@@ -22,12 +22,10 @@ public class Carro {
     private String nome;
     
     @Column(nullable = false, length = 50)
-    @NotEmpty
     @NotNull
     private Double preco;
     
     @Column(nullable = false, length = 4)
-    @NotEmpty
     @NotNull
     private Integer ano;
     

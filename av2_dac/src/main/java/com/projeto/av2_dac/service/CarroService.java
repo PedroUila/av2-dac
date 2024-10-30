@@ -21,5 +21,15 @@ public class CarroService {
         return repository.findAll();
 	}
 	
+	public Carro salvar(Carro carro) {
+		return repository.save(carro);
+	}
+	
+	public void excluir(Integer idCarro) {
+		repository.findById(idCarro).map(carro -> {
+			repository.delete(carro);
+			return Void.TYPE;		
+		});
+	}
 	
 }

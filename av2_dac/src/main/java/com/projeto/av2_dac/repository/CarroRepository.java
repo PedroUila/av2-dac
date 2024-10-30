@@ -13,5 +13,5 @@ public interface CarroRepository extends JpaRepository<Carro, Integer> {
 	public List<Carro> buscarPrimeirosDezCarrosPorId();
 	
 	@Query(value="SELECT * FROM carro c where c.idCarro = :idCarro ", nativeQuery = true)
-	public String retornarDezPrimeirosCarrosPorId(@Param("idCarro") Integer idCarro);
+	public String retornarDezPrimeirosCarrosPorId(@Param("idCarro")  int idCarro);
 }

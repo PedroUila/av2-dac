@@ -16,16 +16,31 @@ public class Carro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idCarro;
     
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false, length = 50)
     @NotEmpty
     @NotNull
-    private String cor;
+    private String nome;
     
-    @Column(nullable = false, length = 1)
+    @Column(nullable = false, length = 50)
     @NotEmpty
     @NotNull
-    private int portas;
-
+    private Double preco;
+    
+    @Column(nullable = false, length = 4)
+    @NotEmpty
+    @NotNull
+    private Integer ano;
+    
+    @Column(nullable = false, length = 50)
+    @NotEmpty
+    @NotNull
+    private String marca;
+    
+    @Column(nullable = false, length = 50)
+    @NotEmpty
+    @NotNull
+    private String cidade;
+    
     @Column(nullable = false, unique = true, length = 7)
     @NotEmpty
     @NotNull
